@@ -28,7 +28,7 @@ router.post("/create", validateJWT, async (req, res) => {
     } catch {
         res.status(500).json({ error: err });
     }
-    JournalModel.create(journalEntry)
+    // JournalModel.create(journalEntry)
 
 });
 
@@ -106,7 +106,7 @@ router.put("/update/:entryId", validateJWT, async (req, res) => {
     };
 
     try {
-        const update = await JournalModel.udpate(updateJournal, query);
+        const update = await JournalModel.update(updatedJournal, query);
         res.status(200).json(update);
     } catch (err) {
         res.status(500).json({ error: err});

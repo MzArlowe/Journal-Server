@@ -21,6 +21,7 @@ dbConnection.authenticate()
             console.log(`[Server]: App is listening on 3000.`);
         });
     })
+    
     .catch((err) => {
     console.log(`[Server]: Server crashed. Error = ${err}`);
 });
